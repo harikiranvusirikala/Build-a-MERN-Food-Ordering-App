@@ -1,0 +1,4 @@
+$ cd backend
+$ npm init -y
+$ npm i express cors dotenv mongodb mongoose
+$ npm i -D ts-node typescript nodemon @types/express @types/cors @types/node
