@@ -33,3 +33,8 @@ Configs saved in components.json
 https://ui.shadcn.com/docs/components/
 $ npx shadcn-ui@latest add button
 Created in components/ui folder
+
+
+Database Setup:
+===
+Create Database in https://cloud.mongodb.com/
