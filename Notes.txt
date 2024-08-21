@@ -38,3 +38,8 @@ Created in components/ui folder
 Database Setup:
 ===
 Create Database in https://cloud.mongodb.com/
+
+
+React Router Setup:
+===
+$ npm i react-router-dom
