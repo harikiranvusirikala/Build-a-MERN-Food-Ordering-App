@@ -53,3 +53,5 @@ https://ui.shadcn.com/docs/components/sheet
 $ npx shadcn-ui@latest add sheet
 $ npm i lucide-react (for icons)
 $ npx shadcn-ui@latest add separator
+
+md:hidden is a Tailwind class name used to display for mobile screens
