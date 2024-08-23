@@ -62,3 +62,5 @@ hover:text-orange-500 is a Tailwind class name used to apply a property to a htm
 max-h-[600px] to set css property of Max Height to 600px.
 
 -mt-16 to set margin top to -16px.
+
+flex-col md:flex-row - It will be applying flex-col for mobile, flex-row for desktop view.
