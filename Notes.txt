@@ -60,3 +60,5 @@ md:block for desktop screens
 hover:text-orange-500 is a Tailwind class name used to apply a property to a html tag.
 
 max-h-[600px] to set css property of Max Height to 600px.
+
+-mt-16 to set margin top to -16px.
