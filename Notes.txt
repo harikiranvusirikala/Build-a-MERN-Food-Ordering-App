@@ -58,3 +58,5 @@ md:hidden is a Tailwind class name used to display for mobile screens
 md:block for desktop screens
 
 hover:text-orange-500 is a Tailwind class name used to apply a property to a html tag.
+
+max-h-[600px] to set css property of Max Height to 600px.
