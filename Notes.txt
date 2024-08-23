@@ -47,3 +47,9 @@ $ npm i react-router-dom
 
 rfcp, rfc
 py-10 class for padding top and bottom
+
+
+https://ui.shadcn.com/docs/components/sheet
+$ npx shadcn-ui@latest add sheet
+$ npm i lucide-react (for icons)
+$ npx shadcn-ui@latest add separator
