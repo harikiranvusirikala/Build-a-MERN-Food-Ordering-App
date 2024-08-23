@@ -55,3 +55,6 @@ $ npm i lucide-react (for icons)
 $ npx shadcn-ui@latest add separator
 
 md:hidden is a Tailwind class name used to display for mobile screens
+md:block for desktop screens
+
+hover:text-orange-500 is a Tailwind class name used to apply a property to a html tag.
