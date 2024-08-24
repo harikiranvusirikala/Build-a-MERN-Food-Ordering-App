@@ -81,3 +81,5 @@ $ npx shadcn-ui@latest add dropdown-menu
 Test user creation API using Postman of VS Code extension Thunder Client.
 
 $ npm i react-query
+
+Auth0 Access Token is used verify the request to backend is done by logged in user only.
