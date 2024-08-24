@@ -64,3 +64,11 @@ max-h-[600px] to set css property of Max Height to 600px.
 -mt-16 to set margin top to -16px.
 
 flex-col md:flex-row - It will be applying flex-col for mobile, flex-row for desktop view.
+
+
+Auth0 Setup:
+===
+https://youtu.be/yufqeJLP1rI - Auth0 in 100 Seconds // And beyond with a Next.js Authentication Tutorial
+https://auth0.com/ -> Applications -> mern-food-ordering-app-frontend, Sing Page Web Applications -> Settings -> Paste http://localhost:5173 in Allowed Callback/Logout/Web Origins -> Save
+
+$ npm i @auth0/auth0-react
