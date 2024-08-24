@@ -79,3 +79,5 @@ $ npx shadcn-ui@latest add dropdown-menu
 
 
 Test user creation API using Postman of VS Code extension Thunder Client.
+
+$ npm i react-query
