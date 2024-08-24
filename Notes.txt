@@ -72,3 +72,8 @@ https://youtu.be/yufqeJLP1rI - Auth0 in 100 Seconds // And beyond with a Next.js
 https://auth0.com/ -> Applications -> mern-food-ordering-app-frontend, Sing Page Web Applications -> Settings -> Paste http://localhost:5173 in Allowed Callback/Logout/Web Origins -> Save
 
 $ npm i @auth0/auth0-react
+
+
+Authenticated user links:
+$ npx shadcn-ui@latest add dropdown-menu
+
