@@ -104,3 +104,6 @@ $ npx shadcn-ui@latest add input
 $ npm i zod
 
 https://ui.shadcn.com/docs/components/button -> Loading
+
+Toast notifications:
+$ npx shadcn-ui@latest add sonner
