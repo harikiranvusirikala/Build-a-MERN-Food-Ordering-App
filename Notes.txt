@@ -93,3 +93,14 @@ $ npm i express-oauth2-jwt-bearer
 Json Web Toekn gives tools to parse and decode the access token.
 $ npm i jsonwebtoken
 $ npm i -D @types/jsonwebtoken
+
+
+User profile form at frontend:
+https://ui.shadcn.com/docs/components/form
+shadcn form components uses React Hook Form behind the scenes which is one of the top packages used by companies.
+And Zod framework which lets us do advanced validations.
+$ npx shadcn-ui@latest add form
+$ npx shadcn-ui@latest add input
+$ npm i zod
+
+https://ui.shadcn.com/docs/components/button -> Loading
