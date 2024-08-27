@@ -107,3 +107,6 @@ https://ui.shadcn.com/docs/components/button -> Loading
 
 Toast notifications:
 $ npx shadcn-ui@latest add sonner
+
+Protected Route is to allow only logged in users to that page.
+
