@@ -120,7 +120,65 @@ $ npm run build
 $ npm start
 
 
-Not seeing option of Rdirects/Rewrites option in render now.
+Add following rule in Rdirects/Rewrites option in frontend render app.
 /* -> /index.html, Rewrite
 
 Update call back urls in auth0 also.
+
+
+Cloudinary Setup:
+To upload restruant images to Cloud and save the populated url to DB and disaply using that link later on.
+This optimizes the image also.
+https://cloudinary.com/
+Getting Started - https://console.cloudinary.com/pm/c-60b42ff0687710fda805aa60568a05/getting-started
+https://youtu.be/2Z1oKtxleb4 - Getting Started in Node.js with Cloudinary - Dev Hints
+
+$ npm i cloudinary multer @types/multer
+multer helps in manging the image binary which is not easy to handle in forms.
+
+Demo index.js
+===
+import { v2 as cloudinary } from 'cloudinary';
+
+(async function() {
+
+    // Configuration
+    cloudinary.config({ 
+        cloud_name: 'dh6uddvhu', 
+        api_key: '491284126668597', 
+        api_secret: '<your_api_secret>' // Click 'View API Keys' above to copy your API secret
+    });
+    
+    // Upload an image
+     const uploadResult = await cloudinary.uploader
+       .upload(
+           'https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg', {
+               public_id: 'shoes',
+           }
+       )
+       .catch((error) => {
+           console.log(error);
+       });
+    
+    console.log(uploadResult);
+    
+    // Optimize delivery by resizing and applying auto-format and auto-quality
+    const optimizeUrl = cloudinary.url('shoes', {
+        fetch_format: 'auto',
+        quality: 'auto'
+    });
+    
+    console.log(optimizeUrl);
+    
+    // Transform the image: auto-crop to square aspect_ratio
+    const autoCropUrl = cloudinary.url('shoes', {
+        crop: 'auto',
+        gravity: 'auto',
+        width: 500,
+        height: 500,
+    });
+    
+    console.log(autoCropUrl);    
+})();
+===
+
