@@ -110,3 +110,17 @@ $ npx shadcn-ui@latest add sonner
 
 Protected Route is to allow only logged in users to that page.
 
+
+Backend deployment:
+npx tsc - converts TypeScript to JavaScript
+
+render.com -> New -> Web Service
+
+$ npm run build
+$ npm start
+
+
+Not seeing option of Rdirects/Rewrites option in render now.
+/* -> /index.html, Rewrite
+
+Update call back urls in auth0 also.
