@@ -187,3 +187,6 @@ Create restaurant API:
 In postname while testing resataurant API.
 The body should be of form type, and other than strings can be inputed as like
 cuisines[0], menuItems[0][name], menuItems[0][price], imageFile (type file).
+
+Restaurant form Cuisine Section:
+$ npx shadcn-ui@latest add checkbox
