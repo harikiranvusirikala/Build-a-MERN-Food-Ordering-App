@@ -190,3 +190,6 @@ cuisines[0], menuItems[0][name], menuItems[0][price], imageFile (type file).
 
 Restaurant form Cuisine Section:
 $ npx shadcn-ui@latest add checkbox
+
+useFormContext - used to pass the form field to child.
+useFieldArray - used to provide context for accessing fields array with append, remove function.
