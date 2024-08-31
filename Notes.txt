@@ -193,3 +193,6 @@ $ npx shadcn-ui@latest add checkbox
 
 useFormContext - used to pass the form field to child.
 useFieldArray - used to provide context for accessing fields array with append, remove function.
+
+For the prices if taking in dollars, convert it to lowest dinominator like cents while saving in DB.
+As it is easy while integrating with stripe payment gateway.
