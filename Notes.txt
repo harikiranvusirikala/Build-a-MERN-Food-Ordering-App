@@ -196,3 +196,8 @@ useFieldArray - used to provide context for accessing fields array with append, 
 
 For the prices if taking in dollars, convert it to lowest dinominator like cents while saving in DB.
 As it is easy while integrating with stripe payment gateway.
+
+AspectRatio is a shadcn component that displays image in a specific aspect ratio irrespective of image.
+$ npx shadcn@latest add aspect-ratio
+
+Change protected route logic to fix async loading issue during page load.
