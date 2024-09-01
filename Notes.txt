@@ -201,3 +201,6 @@ AspectRatio is a shadcn component that displays image in a specific aspect ratio
 $ npx shadcn@latest add aspect-ratio
 
 Change protected route logic to fix async loading issue during page load.
+
+.lean() - remove mongoose ids, metadata, etc.
+http://localhost:7001/api/restaurant/search/london - as this not protected route we can just hit to test search API.
