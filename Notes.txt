@@ -204,3 +204,6 @@ Change protected route logic to fix async loading issue during page load.
 
 .lean() - remove mongoose ids, metadata, etc.
 http://localhost:7001/api/restaurant/search/london - as this not protected route we can just hit to test search API.
+
+lg:grid-cols-[2fr_3fr] - used to have specific CSS for large screens.
+group - add hover effect to child component, if user hovers on parent component.
