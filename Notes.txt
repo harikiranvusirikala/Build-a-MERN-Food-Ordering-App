@@ -207,3 +207,7 @@ http://localhost:7001/api/restaurant/search/london - as this not protected route
 
 lg:grid-cols-[2fr_3fr] - used to have specific CSS for large screens.
 group - add hover effect to child component, if user hovers on parent component.
+
+Mongoose Compass - GUI tool that allows to add content to DB via json.
+- https://www.mongodb.com/products/tools/compass
+Add restaurant test data to DB.
