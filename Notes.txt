@@ -211,3 +211,5 @@ group - add hover effect to child component, if user hovers on parent component.
 Mongoose Compass - GUI tool that allows to add content to DB via json.
 - https://www.mongodb.com/products/tools/compass
 Add restaurant test data to DB.
+
+$ npx shadcn@latest add pagination
