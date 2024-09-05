@@ -213,3 +213,6 @@ Mongoose Compass - GUI tool that allows to add content to DB via json.
 Add restaurant test data to DB.
 
 $ npx shadcn@latest add pagination
+
+$ npx tsc - run this before deploy the code to git/render to see frontend typescript errors.
+
