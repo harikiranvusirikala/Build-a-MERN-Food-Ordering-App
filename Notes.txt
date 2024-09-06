@@ -217,3 +217,5 @@ $ npx shadcn@latest add pagination
 $ npx tsc - run this before deploy the code to git/render to see frontend typescript errors.
 
 $ npx shadcn@latest add card
+
+$ npx shadcn@latest add badge
