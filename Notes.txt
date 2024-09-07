@@ -223,3 +223,6 @@ $ npx shadcn@latest add badge
 useLocation() from react-router-dom gives the path of the URI.
 
 $ npx shadcn@latest add dialog
+
+stripe.com -> Log In -> H@@ -> Authenticator code -> Developers -> API keys
+$ npm install stripe - in backend
