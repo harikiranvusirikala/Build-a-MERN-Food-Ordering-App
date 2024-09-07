@@ -20,7 +20,7 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
 
     const totalWithDelivery = totalInPence + restaurant.deliveryPrice;
 
-    return totalWithDelivery;
+    return (totalWithDelivery / 100).toFixed(2);
   };
 
   return (
@@ -47,14 +47,14 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
                 size={20}
                 onClick={() => removeFromCart(item)}
               />
-              ₹{item.price * item.quantity}
+              ₹{((item.price * item.quantity) / 100).toFixed(2)}
             </span>
           </div>
         ))}
         <Separator />
         <div className="flex justify-between">
           <span>Delivery</span>
-          <span>₹{restaurant.deliveryPrice}</span>
+          <span>₹{(restaurant.deliveryPrice / 100).toFixed(2)}</span>
         </div>
         <Separator />
       </CardContent>

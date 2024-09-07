@@ -226,3 +226,10 @@ $ npx shadcn@latest add dialog
 
 stripe.com -> Log In -> H@@ -> Authenticator code -> Developers -> API keys
 $ npm install stripe - in backend
+
+stripe.com -> Developers -> Events - show the event of stripe and can see order details, state of payment, etc.
+metadata of orderId, restaurantId is sent to stripe so we save.
+
+Stripe Test Cards - https://docs.stripe.com/testing#international-cards -> India -> 4000003560000008
+
+* For INR the lowest denomination is piasa, so need to store prices in DB with paisa only.

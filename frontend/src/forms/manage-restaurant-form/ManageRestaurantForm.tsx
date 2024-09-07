@@ -70,23 +70,23 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
       return;
     }
 
-    // price lowest domination of 100 = 100pence == 1GBP
-    // const deliveryPriceFormatted = parseInt(
-    //   (restaurant.deliveryPrice / 100).toFixed(2)
-    // );
+    // price lowest domination of 100 = 100paisa == 1INR
+    const deliveryPriceFormatted = parseInt(
+      (restaurant.deliveryPrice / 100).toFixed(2)
+    );
 
-    // const menuItemsFormatted = restaurant.menuItems.map((item) => ({
-    //   ...item,
-    //   price: parseInt((item.price / 100).toFixed(2)),
-    // }));
+    const menuItemsFormatted = restaurant.menuItems.map((item) => ({
+      ...item,
+      price: parseInt((item.price / 100).toFixed(2)),
+    }));
 
-    // const updatedRestaurant = {
-    //   ...restaurant,
-    //   deliveryPrice: deliveryPriceFormatted,
-    //   menuItems: menuItemsFormatted,
-    // };
+    const updatedRestaurant = {
+      ...restaurant,
+      deliveryPrice: deliveryPriceFormatted,
+      menuItems: menuItemsFormatted,
+    };
 
-    form.reset(restaurant);
+    form.reset(updatedRestaurant);
   }, [form, restaurant]);
 
   const onSubmit = (formDataJson: RestaurantFormData) => {
@@ -96,7 +96,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
     formData.append("city", formDataJson.city);
     formData.append("country", formDataJson.country);
 
-    formData.append("deliveryPrice", formDataJson.deliveryPrice.toString());
+    formData.append("deliveryPrice", (formDataJson.deliveryPrice * 100).toString());
     formData.append(
       "estimatedDeliveryTime",
       formDataJson.estimatedDeliveryTime.toString()
@@ -106,7 +106,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
     });
     formDataJson.menuItems.forEach((menuItem, index) => {
       formData.append(`menuItems[${index}][name]`, menuItem.name);
-      formData.append(`menuItems[${index}][price]`, menuItem.price.toString());
+      formData.append(`menuItems[${index}][price]`, (menuItem.price * 100).toString());
     });
 
     if (formDataJson.imageFile) {
