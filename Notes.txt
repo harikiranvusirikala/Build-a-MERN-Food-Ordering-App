@@ -221,3 +221,5 @@ $ npx shadcn@latest add card
 $ npx shadcn@latest add badge
 
 useLocation() from react-router-dom gives the path of the URI.
+
+$ npx shadcn@latest add dialog
