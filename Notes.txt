@@ -227,9 +227,30 @@ $ npx shadcn@latest add dialog
 stripe.com -> Log In -> H@@ -> Authenticator code -> Developers -> API keys
 $ npm install stripe - in backend
 
-stripe.com -> Developers -> Events - show the event of stripe and can see order details, state of payment, etc.
+stripe.com -> Developers -> Events -> A Checkout Session was completed - show the event of stripe and can see order details, state of payment, etc.
+https://dashboard.stripe.com/test/workbench/events
 metadata of orderId, restaurantId is sent to stripe so we save.
 
 Stripe Test Cards - https://docs.stripe.com/testing#international-cards -> India -> 4000003560000008
 
 * For INR the lowest denomination is piasa, so need to store prices in DB with paisa only.
+
+In normal circumstances when we want to use webhook from payment gateway, the code need to be deployed.
+Because webhooks can't connect to localhost.
+But stripe has a way to accept webhooks locally using the Stripe CLI.
+
+Stripe CLI Setup:
+stripe.com -> Developers -> Webhooks -> Test in local environment/Add local listener
+-> Download the CLI -> https://docs.stripe.com/stripe-cli
+-> Sample usage for Node.js
+$ brew install stripe/stripe-cli/stripe
+$ stripe login
+$ stripe listen --forward-to localhost:7000/api/order/checkout/webhook
+-> use the webhook secret to verify the request
+
+$ stripe trigger checkout.session.completed - to simulate a stripe event
+
+$ npm i concurrently - in backend, to allow to run multiple npm commands under the same script
+
+Update express to pass raw data for backend stripe webhook API.
+
