@@ -254,3 +254,6 @@ $ npm i concurrently - in backend, to allow to run multiple npm commands under t
 
 Update express to pass raw data for backend stripe webhook API.
 
+Deploying checkout flow to render:
+stripe.com -> Developers -> Webhooks -> Add an endpoint/Add endpoint -> (backend/render web service URL)/api/order/checkout/webhook, Add event - checkout, checkout.session.completed
+Update backend with new environment variables (signining secrete is different from local).

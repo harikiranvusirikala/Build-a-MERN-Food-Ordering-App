@@ -6,6 +6,8 @@ import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import UserProfileForm, {
   UserFormData,
 } from "@/forms/user-profile-form/UserProfileForm";
+import { useGetMyUser } from "@/api/MyUserApi";
+
 type Props = {
   onCheckout: (userFormData: UserFormData) => void;
   disabled: boolean;
