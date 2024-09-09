@@ -19,11 +19,20 @@ type Props = {
 };
 
 const OrderItemCard = ({ order }: Props) => {
+  const { updateRestaurantStatus, isLoading } = useUpdateMyRestaurantOrder();
   const [status, setStatus] = useState<OrderStatus>(order.status);
 
-  useEffect(() => {
+  useEffect(() =>  {
     setStatus(order.status);
   }, [order.status]);
+
+  const handleStatusChange = async (newStatus: OrderStatus) => {
+    await updateRestaurantStatus({
+      orderId: order._id as string,
+      status: newStatus,
+    });
+    setStatus(newStatus);
+  };
 
   const getTime = () => {
     const orderDateTime = new Date(order.createdAt);
@@ -80,6 +89,8 @@ const OrderItemCard = ({ order }: Props) => {
           <Label htmlFor="status">What is the status of this order?</Label>
           <Select
             value={status}
+            disabled={isLoading}
+            onValueChange={(value) => handleStatusChange(value as OrderStatus)}
           >
             <SelectTrigger id="status">
               <SelectValue placeholder="Status" />
