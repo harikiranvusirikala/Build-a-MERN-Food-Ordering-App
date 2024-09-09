@@ -259,3 +259,6 @@ stripe.com -> Developers -> Webhooks -> Add an endpoint/Add endpoint -> (backend
 Update backend with new environment variables (signining secrete is different from local).
 
 $ npx shadcn@latest add progress
+
+$ npx shadcn@latest add tabs
+$ npx shadcn@latest add select
