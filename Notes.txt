@@ -262,3 +262,5 @@ $ npx shadcn@latest add progress
 
 $ npx shadcn@latest add tabs
 $ npx shadcn@latest add select
+
+refetchInterval in useQuery provides time to re-fetch data again and again.
